@@ -3,20 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Multi-Timezone Clock</title>
 
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <!-- Header -->
+    <!-- ================= HEADER ================= -->
+
     <header class="header">
-      <h1>🌍 Multi-Timezone Clock</h1>
+      <div class="logo">
+        <h1>🌍 Multi-Timezone Clock</h1>
+        <p>Compare time across the world in real time</p>
+      </div>
 
       <div class="toggle-box">
         <span>12H</span>
 
         <label class="switch">
-          <input type="checkbox" id="format-toggle" title="Toggle time format" aria-label="Toggle between 12-hour and 24-hour format" />
+          <input
+            type="checkbox"
+            id="format-toggle"
+            aria-label="Toggle Time Format"
+          />
+
           <span class="slider"></span>
         </label>
 
@@ -24,17 +35,60 @@
       </div>
     </header>
 
-    <!-- Controls -->
+    <!-- ================= CONTROLS ================= -->
+
     <section class="controls">
-      <select id="timezone-select" aria-label="Select timezone">
-        <option value="">Select Timezone</option>
+      <select
+        id="timezone-select"
+        title="Select Timezone"
+        aria-label="Select Timezone"
+      >
+        <option value="">🌎 Select Timezone</option>
       </select>
 
-      <button id="add-clock">Add Clock</button>
+      <button id="add-clock">➕ Add Clock</button>
     </section>
 
-    <!-- Clock Cards -->
+    <!-- ================= DASHBOARD ================= -->
+
+    <section class="dashboard">
+      <div class="dashboard-card">
+        <h3>Total Clocks</h3>
+
+        <h2 id="total-clocks">0</h2>
+      </div>
+
+      <div class="dashboard-card">
+        <h3>Current Time Format</h3>
+
+        <h2 id="current-format">12 Hour</h2>
+      </div>
+
+      <div class="dashboard-card comparison-card">
+        <h3>🌍 Time Comparison</h3>
+
+        <table id="comparison-table">
+          <thead>
+            <tr>
+              <th>Timezone</th>
+              <th>Difference</th>
+            </tr>
+          </thead>
+
+          <tbody id="comparison-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ================= CLOCKS ================= -->
+
     <main id="clock-container"></main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+      <p>Built with ❤️ using HTML, CSS, TypeScript & Express</p>
+    </footer>
 
     <script type="module" src="/dist/client/app.js"></script>
   </body>

@@ -256,3 +256,69 @@ font-size:2rem;
     right:15px;
     z-index:100;
 }
+
+.comparison-card{
+    grid-column:1/-1;
+}
+
+#comparison-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+#comparison-table th,
+#comparison-table td{
+    padding:12px;
+    text-align:left;
+    border-bottom:1px solid rgba(255,255,255,.15);
+}
+
+#comparison-table th{
+    color:#38bdf8;
+}
+
+#comparison-table td{
+    color:white;
+}
+.ahead,
+.behind,
+.same{
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:.85rem;
+    font-weight:600;
+    display:inline-block;
+}
+
+.ahead{
+    background:#16a34a;
+    color:#fff;
+}
+
+.behind{
+    background:#dc2626;
+    color:#fff;
+}
+
+.same{
+    background:#2563eb;
+    color:#fff;
+}
+.timezone-name{
+    font-size:.85rem;
+    color:#cbd5e1;
+    margin-bottom:12px;
+}
+
+.utc-offset,
+.comparison,
+.day-night{
+    margin-top:8px;
+    font-size:.9rem;
+    color:#e2e8f0;
+}
+
+.comparison{
+    font-weight:600;
+}
