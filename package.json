@@ -1,21 +1,20 @@
 {
   "name": "multi-timezone-clock",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Multi Timezone Clock Assignment",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/express": "^5.0.6",
-    "nodemon": "^3.1.14",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
-  },
+  "build:client": "tsc -p tsconfig.client.json",
+  "build:server": "tsc -p tsconfig.server.json",
+  "build": "npm run build:client && npm run build:server",
+  "dev": "npm run build && node dist/server/server.js"
+},
   "dependencies": {
     "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^22.15.30",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
   }
 }

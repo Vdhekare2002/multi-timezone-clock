@@ -1,20 +1,16 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.timezones = void 0;
-exports.timezones = [
+export const timezones = [
     "Asia/Kolkata",
-    "Europe/London",
-    "America/New_York",
-    "Asia/Tokyo",
-    "Australia/Sydney",
-    "Europe/Paris",
     "Asia/Dubai",
+    "Asia/Tokyo",
     "Asia/Singapore",
-    "America/Los_Angeles",
-    "Africa/Cairo",
-    "Europe/Berlin",
     "Asia/Seoul",
-    "Asia/Bangkok",
-    "Pacific/Auckland",
-    "America/Toronto"
+    "Europe/London",
+    "Europe/Paris",
+    "Europe/Berlin",
+    "America/New_York",
+    "America/Chicago",
+    "America/Los_Angeles",
+    "America/Toronto",
+    "Australia/Sydney",
+    "Africa/Cairo"
 ];

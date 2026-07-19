@@ -2,35 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Multi Timezone Clock</title>
+    <title>Multi-Timezone Clock</title>
 
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
     <!-- Header -->
-
     <header class="header">
       <h1>🌍 Multi-Timezone Clock</h1>
 
-      <div class="toggle-section">
+      <div class="toggle-box">
         <span>12H</span>
 
-        <label class="switch" for="format-toggle">
-          <span id="format-toggle-label" class="sr-only"
-            >Toggle time format (12-hour / 24-hour)</span
-          >
-          <input
-            type="checkbox"
-            id="format-toggle"
-            title="Toggle time format (12-hour / 24-hour)"
-            aria-labelledby="format-toggle-label"
-            aria-checked="false"
-          />
-
+        <label class="switch">
+          <input type="checkbox" id="format-toggle" title="Toggle time format" aria-label="Toggle between 12-hour and 24-hour format" />
           <span class="slider"></span>
         </label>
 
@@ -38,21 +24,18 @@
       </div>
     </header>
 
-    <!-- Search Area -->
-
+    <!-- Controls -->
     <section class="controls">
-      <label for="timezone-select">Timezone:</label>
-      <select id="timezone-select" title="Select a timezone to add a new clock">
+      <select id="timezone-select" aria-label="Select timezone">
         <option value="">Select Timezone</option>
       </select>
 
-      <button id="add-clock">+ Add Clock</button>
+      <button id="add-clock">Add Clock</button>
     </section>
 
     <!-- Clock Cards -->
-
     <main id="clock-container"></main>
 
-    <script src="../dist/client/app.js"></script>
+    <script type="module" src="/dist/client/app.js"></script>
   </body>
 </html>

@@ -7,8 +7,13 @@ const express_1 = __importDefault(require("express"));
 const path_1 = __importDefault(require("path"));
 const app = (0, express_1.default)();
 const PORT = 3000;
-// Client folder ko public bana do
-app.use(express_1.default.static(path_1.default.join(__dirname, "../client")));
+// Serve client files
+app.use(express_1.default.static(path_1.default.join(process.cwd(), "client")));
+// Serve compiled JS
+app.use("/dist", express_1.default.static(path_1.default.join(process.cwd(), "dist")));
+app.get("/", (req, res) => {
+    res.sendFile(path_1.default.join(process.cwd(), "client", "index.html"));
+});
 app.listen(PORT, () => {
     console.log(`🚀 Server running at http://localhost:${PORT}`);
 });
