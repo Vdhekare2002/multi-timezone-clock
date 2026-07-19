@@ -1,6 +1,7 @@
 {
   "name": "multi-timezone-clock",
   "version": "1.0.0",
+  "engines": {"node":"22.x"},
   "description": "Multi Timezone Clock Assignment",
   "scripts": {
   "build:client": "tsc -p tsconfig.client.json",
